@@ -1,9 +1,9 @@
 # WP Blocks Cloud
-Contributors: mrpritchett
-Tags: blocks, gutenberg, restaurant, menu
-Tested up to: 5.0.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors: mrpritchett  
+Tags: blocks, gutenberg, restaurant, menu  
+Tested up to: 5.0.1  
+License: GPLv2 or later  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 A library of simple, easy to use blocks for the new WordPress Gutenberg editor.
 
