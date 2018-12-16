@@ -20,5 +20,11 @@ class WP_Blocks_Cloud_Assets {
 			[ 'wp-blocks', 'wp-i18n', 'wp-editor', 'wp-components' ],
 			WPBLOCKSCLOUD
 		);
+		wp_enqueue_style(
+			'wp-blocks-cloud-blocks-css',
+			plugins_url( 'blocks/dist/main.css', plugin_dir_path( __FILE__ ) ),
+			[],
+			WPBLOCKSCLOUD
+		);
 	}
 }

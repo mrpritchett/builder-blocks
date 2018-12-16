@@ -37,10 +37,30 @@ export default function (block) {
 
   const rendered = () => {
     return (
-      <div className="">
-        <h5>{ block.attributes.name }</h5>
-        <h6>${ block.attributes.price }</h6>
-        <p>{ block.attributes.description }</p>
+      <div className="wpbc-restaurant-menu-item">
+        <header className="wpbc-restaurant-menu-item-header">
+          <strong><span>
+            <TextControl
+              placeholder={ __('Write the name of the menu item here...') }
+              onChange={ name => block.setAttributes({ name }) }
+              value={ block.attributes.name }
+            />
+          </span></strong>
+          <strong><span>
+            <TextControl
+              type="currency"
+              placeholder={ __('0.00') }
+              onChange={ price => block.setAttributes({ price }) }
+              value={ block.attributes.price }
+            />
+          </span></strong>
+        </header>
+        <TextareaControl
+          rows="2"
+          placeholder={ __('Write a description of the menu item here...') }
+          onChange={ description => block.setAttributes({ description }) }
+          value={ block.attributes.description }
+        />
       </div>
     )
   }
