@@ -1,5 +1,7 @@
+const { InnerBlocks } = wp.editor
+
 export default function (block) {
   return (
-    <div>Hello</div>
+    <InnerBlocks.Content />
   )
 }

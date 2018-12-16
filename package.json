@@ -4,14 +4,14 @@
 	"version": "1.0.0",
 	"author": "Pritchett Media <matt@pritchett.media>",
 	"contributors": [
-	  "Matthew Pritchett <matt@pritchett.media>",
+    "Matthew Pritchett <matt@pritchett.media>"
   ],
 	"repository": {
 		"type": "git",
 		"url": "https://gitlab.ahc.ufl.edu/webservices/wordpress-plugins/ufhealth-apollo-blocks.git"
   },
   "scripts": {
-    "dev": "wordpack dev",
+    "dev": "wordpack dev"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",

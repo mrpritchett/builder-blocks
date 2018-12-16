@@ -1,21 +1,17 @@
+const { InnerBlocks } = wp.editor
+const ALLOWED_BLOCKS = [ 'wp-blocks-cloud/menuitem', 'core/heading', 'core/paragraph', 'core/image', 'core/gallery' ];
+
 export default function (block) {
   const controls = () => {
     return (
-      console.log('Controls Loaded')
-    )
-  }
-
-  const rendered = () => {
-    return (
-      console.log('Editor Loaded')
+      <InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } />
     )
   }
 
   /**
    * Return the controls, and rendered UIs together as an array
    */
-  return [
-    controls(),
-    rendered()
-  ]
+  return (
+    controls()
+  )
 }
