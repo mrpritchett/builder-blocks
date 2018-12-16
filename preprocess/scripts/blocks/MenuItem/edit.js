@@ -3,9 +3,10 @@ const { InspectorControls } = wp.editor
 const { PanelBody, TextControl, TextareaControl } = wp.components
 
 export default function (block) {
+  console.log('blocks: ', block.attributes.name)
   const controls = () => {
     return (
-      <InspectorControls key="inspector">
+      <InspectorControls>
         <PanelBody title={ __('Menu Item Settings') }>
           <div className="components-base-control">
             <TextControl
@@ -38,7 +39,7 @@ export default function (block) {
     return (
       <div className="">
         <h5>{ block.attributes.name }</h5>
-        <h6>$ { block.attributes.price }</h6>
+        <h6>${ block.attributes.price }</h6>
         <p>{ block.attributes.description }</p>
       </div>
     )

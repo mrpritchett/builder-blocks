@@ -1,7 +1,9 @@
 const { InnerBlocks } = wp.editor
 
-export default function (block) {
+export default function () {
   return (
-    <InnerBlocks.Content />
+    <div>
+      <InnerBlocks.Content />
+    </div>
   )
 }

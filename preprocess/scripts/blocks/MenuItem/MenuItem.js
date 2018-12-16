@@ -29,7 +29,18 @@ export default {
     </svg>
   ),
   attributes: {
-    
+    name: {
+      type: 'string',
+      default: ''
+    },
+    description: {
+      type: 'string',
+      default: ''
+    },
+    price: {
+      type: 'string',
+      default: ''
+    },
   },
   edit,
   save
