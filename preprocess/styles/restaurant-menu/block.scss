@@ -1,114 +1,56 @@
-.wpbc-restaurant-menu {
-	padding-bottom: 15px;
-}
-
-.wpbc-restaurant-menu-item-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+.editor-inner-blocks {
 	width: 100%;
+}
 
-	@media (max-width: 568px) {
-		flex-direction: column;
-	}
+.wpbc-restaurant-menu-item {
+	margin-bottom: 1.5em;
 
+	.input-control,
+	input[type="checkbox"],
+	input[type="color"],
+	input[type="date"],
+	input[type="currency"],
+	input[type="datetime-local"],
+	input[type="datetime"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="radio"],
+	input[type="search"],
+	input[type="tel"],
 	input[type="text"],
-	input[type="currency"] {
-		background: none;
-		border: none;
+	input[type="time"],
+	input[type="url"],
+	input[type="week"],
+	select,
+	textarea {
+		border:none;
+		background-image:none;
+		background-color:transparent;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
 		box-shadow: none;
-		color: #111;
 		font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
-		font-size: 22px;
-		height: 1.8em;
-		margin: 0;
-		outline: none;
-		vertical-align: middle;
-		width: 100%;
-
-		&:hover,
-		&:active,
-		&:hover {
-			background: none;
-			border: none;
-			box-shadow: none;
-			outline: none;
-		}
+		font-size: 20px;
+		line-height: 1.35em;
 	}
 
-	input[type="currency"] {
-		margin-left: 50%;
-		text-align: right;
-		vertical-align: middle;
-		width: 50%;
+	.wpbc-restaurant-menu-item-header {
+		display: grid;
+		grid-template-columns: 1fr 100px;
 
-		&:before {
-			color: #111;
-			content: "$";
-			font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
-			font-size: 22px;
-			line-height: 1.8;
-			margin: 0;
-			vertical-align: middle;
+		input[type="text"],
+		input[type="currency"],
+		span {
+			font-weight: bold;
+		}
+
+		input[type="currency"] {
+			margin-top: -2px;
+			text-align: right;
 		}
 	}
 }
 
-.editor-block-list__block textarea {
-	background: none;
-	border: none;
-	box-shadow: none;
-	color: #111;
-	font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
-	font-size: 22px;
-	line-height: 1.8;
-	margin: 0;
-	outline: none;
-
-	&:hover,
-	&:active,
-	&:hover {
-		background: none;
-		border: none;
-		box-shadow: none;
-		outline: none;
-	}
-}
-
-.editor-block-list__block textarea,
-.wpbc-restaurant-menu-item-header input[type="text"],
-.wpbc-restaurant-menu-item-header input[type="currency"] {
-	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-		color: #111;
-		font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
-		font-size: 22px;
-		line-height: 1.8;
-		margin: 0;
-		vertical-align: middle;
-	}
-	&::-moz-placeholder { /* Firefox 19+ */
-		color: #111;
-		font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
-		font-size: 22px;
-		line-height: 1.8;
-		margin: 0;
-		vertical-align: middle;
-	}
-	&:-ms-input-placeholder { /* IE 10+ */
-		color: #111;
-		font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
-		font-size: 22px;
-		line-height: 1.8;
-		margin: 0;
-		vertical-align: middle;
-	}
-	&:-moz-placeholder { /* Firefox 18- */
-		color: #111;
-		font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
-		font-size: 22px;
-		line-height: 1.8;
-		margin: 0;
-		vertical-align: middle;
-	}
-}
 

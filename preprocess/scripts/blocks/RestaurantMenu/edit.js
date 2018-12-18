@@ -1,5 +1,5 @@
 const { InnerBlocks } = wp.editor
-const ALLOWED_BLOCKS = [ 'wp-blocks-cloud/menuitem', 'core/heading', 'core/paragraph', 'core/image', 'core/gallery' ]
+const ALLOWED_BLOCKS = [ 'wp-blocks-cloud/menuitem', 'core/heading', 'core/paragraph', 'core/image', 'core/gallery', 'core/columns' ]
 
 export default function () {
   const controls = () => {

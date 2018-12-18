@@ -1,6 +1,5 @@
 {
   "name": "wp-blocks-cloud",
-  "private": true,
   "version": "1.0.0",
   "author": "Pritchett Media <matt@pritchett.media>",
   "contributors": [
@@ -8,10 +7,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitlab.ahc.ufl.edu/webservices/wordpress-plugins/ufhealth-apollo-blocks.git"
+    "url": "https://github.com/mrpritchett/wp-blocks-cloud.git"
   },
   "scripts": {
-    "dev": "wordpack dev"
+    "dev": "webpack"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
@@ -39,6 +38,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "node-sass": "^4.11.0",
+    "normalize.css": "^8.0.1",
     "npx": "^10.2.0",
     "sass-loader": "^7.1.0",
     "webpack": "^4.27.1",
