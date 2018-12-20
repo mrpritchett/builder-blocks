@@ -1,4 +1,4 @@
-# WP Blocks Cloud
+# Builder Blocks
 Contributors: mrpritchett  
 Tags: blocks, gutenberg, restaurant, menu  
 Tested up to: 5.0.1  
@@ -13,5 +13,12 @@ A library of simple, easy to use blocks for the new WordPress Gutenberg editor.
 
 ### Installation
 
-1. Upload `wp-blocks-cloud.php` to the `/wp-content/plugins/` directory
+1. Upload `builder-blocks.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
+
+### Changelog
+
+#### 1.0.0
+* Initial Release.
+* Adds Restaurant Menu Block
+* Adds Restaurant Menu Item Child Block

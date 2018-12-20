@@ -1,2 +1,5 @@
 /node_modules
 /yarn-error.log
+.DS_Store
+**/*/.DS_Store
+/assets/.DS_Store
