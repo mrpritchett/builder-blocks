@@ -1,0 +1,46 @@
+.editor-inner-blocks {
+  width: 100%; }
+
+.wpbc-restaurant-menu-item {
+  margin-bottom: 1.5em; }
+  .wpbc-restaurant-menu-item .input-control,
+  .wpbc-restaurant-menu-item input[type="checkbox"],
+  .wpbc-restaurant-menu-item input[type="color"],
+  .wpbc-restaurant-menu-item input[type="date"],
+  .wpbc-restaurant-menu-item input[type="currency"],
+  .wpbc-restaurant-menu-item input[type="datetime-local"],
+  .wpbc-restaurant-menu-item input[type="datetime"],
+  .wpbc-restaurant-menu-item input[type="email"],
+  .wpbc-restaurant-menu-item input[type="month"],
+  .wpbc-restaurant-menu-item input[type="number"],
+  .wpbc-restaurant-menu-item input[type="password"],
+  .wpbc-restaurant-menu-item input[type="radio"],
+  .wpbc-restaurant-menu-item input[type="search"],
+  .wpbc-restaurant-menu-item input[type="tel"],
+  .wpbc-restaurant-menu-item input[type="text"],
+  .wpbc-restaurant-menu-item input[type="time"],
+  .wpbc-restaurant-menu-item input[type="url"],
+  .wpbc-restaurant-menu-item input[type="week"],
+  .wpbc-restaurant-menu-item select,
+  .wpbc-restaurant-menu-item textarea {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.35em; }
+  .wpbc-restaurant-menu-item .wpbc-restaurant-menu-item-header {
+    display: grid;
+    grid-template-columns: 1fr 100px; }
+    .wpbc-restaurant-menu-item .wpbc-restaurant-menu-item-header input[type="text"],
+    .wpbc-restaurant-menu-item .wpbc-restaurant-menu-item-header input[type="currency"],
+    .wpbc-restaurant-menu-item .wpbc-restaurant-menu-item-header span {
+      font-weight: bold; }
+    .wpbc-restaurant-menu-item .wpbc-restaurant-menu-item-header input[type="currency"] {
+      margin-top: -2px;
+      text-align: right; }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9ibG9ja3MvZGlzdC9tYWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/

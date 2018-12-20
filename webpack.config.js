@@ -1,36 +1,17 @@
 var ExtractText = require('extract-text-webpack-plugin');
 var debug = process.env.NODE_ENV !== 'production';
 var webpack = require('webpack');
-
-var extractEditorSCSS = new ExtractText({
-  filename: './blocks.editor.build.css'
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const extractSass = new ExtractTextPlugin({
+    filename: "../../blocks/dist/[name].css",
 });
-
-var extractBlockSCSS = new ExtractText({
-  filename: './blocks.style.build.css'
-});
-
-var plugins = [extractEditorSCSS, extractBlockSCSS];
-
-var scssConfig = {
-  use: [
-    {
-      loader: 'css-loader'
-    },
-    {
-      loader: 'sass-loader',
-      options: {
-        outputStyle: 'compressed'
-      }
-    }
-  ]
-};
 
 module.exports = {
   context: __dirname,
   devtool: debug ? 'inline-sourcemap' : null,
   mode: debug ? 'development' : 'production',
-  entry: './preprocess/scripts/blocks.js',
+  entry: ['./preprocess/scripts/blocks.js', './preprocess/styles/blocks.scss'],
   output: {
     path: __dirname + '/blocks/dist/',
     filename: 'blocks.build.js'
@@ -46,17 +27,21 @@ module.exports = {
         ]
       },
       {
-        test: /preprocess\/styles\/\.scss$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
-        use: extractEditorSCSS.extract(scssConfig)
+        use: extractSass.extract({
+          use: [{
+            loader: "css-loader",
+          }, {
+            loader: "sass-loader"
+          }],
+          fallback: "style-loader"
+        })
       },
-      {
-        test: /preprocess\/styles\/\.scss$/,
-        exclude: /node_modules/,
-        use: extractBlockSCSS.extract(scssConfig)
-      }
     ]
   },
-  plugins: plugins,
+  plugins: [
+    extractSass,
+  ],
   watch: true,
 };

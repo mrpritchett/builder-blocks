@@ -1,19 +1,11 @@
 const { InnerBlocks } = wp.editor
-const ALLOWED_BLOCKS = [ 'wp-blocks-cloud/menuitem', 'core/heading', 'core/paragraph', 'core/image', 'core/gallery' ]
+const ALLOWED_BLOCKS = [ 'builder-blocks/menuitem', 'core/heading', 'core/paragraph', 'core/image', 'core/gallery', 'core/columns' ]
 
 export default function () {
   const controls = () => {
     return (
-      <div>
+      <div className="wpbc-restaurant-menu">
         <InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } />
-      </div>
-    )
-  }
-
-  const rendered = () => {
-    return (
-      <div>
-        <InnerBlocks.Content />
       </div>
     )
   }
@@ -22,7 +14,6 @@ export default function () {
    * Return the controls, and rendered UIs together as an array
    */
   return [
-    controls(),
-    rendered()
+    controls()
   ]
 }

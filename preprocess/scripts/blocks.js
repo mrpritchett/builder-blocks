@@ -3,5 +3,5 @@ import MenuItem from './blocks/MenuItem/MenuItem'
 
 const { registerBlockType } = wp.blocks
 
-registerBlockType('wp-blocks-cloud/restaurantmenu', RestaurantMenu)
-registerBlockType('wp-blocks-cloud/menuitem', MenuItem)
+registerBlockType('builder-blocks/restaurantmenu', RestaurantMenu)
+registerBlockType('builder-blocks/menuitem', MenuItem)
