@@ -13,6 +13,8 @@ A library of simple, easy to use blocks for the new WordPress Gutenberg editor.
 
 A library of simple, easy to use blocks for the new WordPress Gutenberg editor.
 
+A special thanks to Mel Choyce and her awesome design work that led to the Restaurant blocks creation!
+
 == Installation ==
 
 1. Upload `builder-blocks.php` to the `/wp-content/plugins/` directory
