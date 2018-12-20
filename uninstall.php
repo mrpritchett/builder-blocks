@@ -22,7 +22,7 @@
  * @link       https://pritchett.media
  * @since      1.0.0
  *
- * @package    Wp_Blocks_Cloud
+ * @package    Builder_Blocks
  */
 
 // If uninstall not called from WordPress, then exit.

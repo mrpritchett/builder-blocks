@@ -10,18 +10,18 @@
  *
  * @link              https://pritchett.media
  * @since             1.0.0
- * @package           Wp_Blocks_Cloud
+ * @package           Builder_Blocks
  *
  * @wordpress-plugin
- * Plugin Name:       WP Blocks Cloud
- * Plugin URI:        https://wpblocks.cloud
+ * Plugin Name:       Builder Blocks
+ * Plugin URI:        https://builderblocks.cloud
  * Description:       Adds a group of blocks for the new Gutenberg editor.
  * Version:           1.0.0
  * Author:            Pritchett Media
  * Author URI:        https://pritchett.media
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       wp-blocks-cloud
+ * Text Domain:       builder-blocks
  * Domain Path:       /languages
  */
 
@@ -35,12 +35,12 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WPBLOCKSCLOUD', '1.0.0' );
+define( 'BUILDERBLOCKS', '1.0.0' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-wp-blocks-cloud-assets.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-builder-blocks-assets.php';
 
 WP_Blocks_Cloud_Assets::init();
