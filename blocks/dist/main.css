@@ -43,4 +43,16 @@
       margin-top: -2px;
       text-align: right; }
 
+/* Main column width */
+.wp-block {
+  max-width: 100% !important; }
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+  max-width: 80%; }
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+  max-width: none; }
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9ibG9ja3MvZGlzdC9tYWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/

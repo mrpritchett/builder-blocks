@@ -17,14 +17,19 @@ export default function (block) {
 
   const rendered = () => {
     return (
-      <div className="wpbc-testimonials-item">
-        <header className="wpbc-testimonials-header">
+      <div className="wpbc-restaurant-menu-item">
+        <header className="wpbc-restaurant-menu-item-header">
           <TextControl
-            placeholder={ __('Write a title for the testimonial here...') }
+            placeholder={ __('Write the name of the menu item here...') }
             onChange={ name => block.setAttributes({ name }) }
-            value={ block.attributes.title }
+            value={ block.attributes.name }
           />
-
+          <TextControl
+            type="currency"
+            placeholder={ __('0.00') }
+            onChange={ price => block.setAttributes({ price }) }
+            value={ block.attributes.price }
+          />
         </header>
         <TextareaControl
           rows="2"
