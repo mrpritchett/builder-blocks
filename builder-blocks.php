@@ -42,5 +42,7 @@ define( 'BUILDERBLOCKS', '1.0.0' );
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-builder-blocks-assets.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-builder-blocks-filters.php';
 
-WP_Blocks_Cloud_Assets::init();
+Builder_Blocks_Assets::init();
+Builder_Blocks_Filters::init();

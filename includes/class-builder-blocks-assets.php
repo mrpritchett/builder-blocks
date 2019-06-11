@@ -2,7 +2,7 @@
 /**
  *
  */
-class WP_Blocks_Cloud_Assets {
+class Builder_Blocks_Assets {
 	/**
 	 *
 	 */
