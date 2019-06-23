@@ -14,18 +14,31 @@ module.exports = {
   entry: ['./preprocess/scripts/blocks.js', './preprocess/styles/blocks.scss'],
   output: {
     path: __dirname + '/blocks/dist/',
-    filename: 'blocks.build.js'
+    filename: 'blocks.build.js',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          "babel-loader",
-          "eslint-loader",
-        ]
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            "@babel/preset-env",
+            "@wordpress/default",
+            {
+              plugins: [
+                '@babel/plugin-proposal-class-properties'
+              ]
+            }
+          ]
+        }
       },
+      {
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+    },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
