@@ -10,8 +10,8 @@ export default {
   icon: 'money',
   attributes: {
     image: {
-      type: 'string',
-      default: ''
+      type: 'object',
+      default: null,
     },
   },
   edit,

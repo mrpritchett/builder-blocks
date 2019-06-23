@@ -1,8 +1,14 @@
 const { __ } = wp.i18n
 const { InspectorControls } = wp.editor
-const { PanelBody, TextControl, FormFileUpload } = wp.components
+const { PanelBody, MediaUpload } = wp.components
 
 export default function (block) {
+  const onImageSelect = (image) => {
+    block.setAttributes({
+      image: image.sizes.full.url
+    })
+  }
+
   const controls = () => {
     return (
       <InspectorControls>
@@ -17,17 +23,17 @@ export default function (block) {
 
   const rendered = () => {
     return (
-      <div className="wpbc-testimonials-item">
-        <header className="wpbc-testimonials-header">
-          <FormFileUpload
-            accept="image/*"
-            onChange={ () => console.log('new image') }
-          >
-            Upload
-          </FormFileUpload>
-
-        </header>
-
+      <div className="builder-blocks-hero-block">
+        <MediaUpload
+          onSelect={ ({ image }) => onImageSelect(image) }
+          type="image"
+          value={ block.attributes.image } // make sure you destructured backgroundImage from props.attributes!
+          render={ ({ open }) => (
+            <button onClick={ open }>
+              { __('Upload Image') }
+            </button>
+          ) }
+        />
       </div>
     )
   }
