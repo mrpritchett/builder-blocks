@@ -55,4 +55,13 @@
 .wp-block[data-align="full"] {
   max-width: none; }
 
+.builder-blocks-settings-margin-wrap,
+.builder-blocks-settings-padding-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px; }
+  .builder-blocks-settings-margin-wrap .components-base-control,
+  .builder-blocks-settings-padding-wrap .components-base-control {
+    margin-bottom: 0 !important; }
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9ibG9ja3MvZGlzdC9tYWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
