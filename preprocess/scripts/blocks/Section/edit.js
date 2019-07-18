@@ -1,6 +1,7 @@
-const { Component, createElement } = wp.element
 import Inspector from './inspector'
 import Editor from './editor.js'
+
+const { createElement } = wp.element
 
 export default function (block) {
   return (

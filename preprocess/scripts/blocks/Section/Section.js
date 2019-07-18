@@ -59,7 +59,7 @@ export default {
     },
     borderSize: {
       type: 'string',
-      default: 'cover',
+      default: '0',
     },
     borderStyle: {
       type: 'string',
@@ -73,6 +73,14 @@ export default {
         b: 255,
         a: 1.0,
       },
+    },
+    containerWidth: {
+      type: 'string',
+      default: 'full',
+    },
+    contentWidth: {
+      type: 'string',
+      default: 'container',
     },
   },
   edit,
