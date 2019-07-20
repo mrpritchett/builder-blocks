@@ -7,15 +7,15 @@ export default class Editor extends Component {
 
     const style = {
       backgroundColor: 'rgba(' + backgroundColor.r + ', ' + backgroundColor.g + ', ' + backgroundColor.b + ', ' + backgroundColor.a + ')',
-      backgroundImage: 'url(' + backgroundImage.url + ')',
-      backgroundPosition: backgroundPosition,
-      backgroundRepeat: backgroundRepeat,
-      backgroundSize: backgroundSize,
+      backgroundImage: backgroundImage.url ? 'url(' + backgroundImage.url + ')' : 'inherit',
+      backgroundPosition: backgroundPosition ? backgroundPosition : 'inherit',
+      backgroundRepeat: backgroundRepeat ? backgroundRepeat : 'inherit',
+      backgroundSize: backgroundSize ? backgroundSize : 'inherit',
       borderColor: 'rgba(' + borderColor.r + ', ' + borderColor.g + ', ' + borderColor.b + ', ' + borderColor.a + ')',
       borderWidth: borderWidth + 'px',
       borderStyle: borderStyle,
-      margin: margin.left + 'px ' + margin.top + 'px ' + margin.right + 'px ' + margin.bottom + 'px',
-      padding: padding.left + 'px ' + padding.top + 'px ' + padding.right + 'px ' + padding.bottom + 'px',
+      margin: margin.top + 'px ' + margin.right + 'px ' + margin.bottom + 'px ' + margin.left + 'px',
+      padding: padding.top + 'px ' + padding.right + 'px ' + padding.bottom + 'px ' + padding.left + 'px',
       width: containerWidth === 'full' ? '100%' : '1200px',
     }
 

@@ -13,8 +13,8 @@ export default function (block) {
     borderColor: 'rgba(' + borderColor.r + ', ' + borderColor.g + ', ' + borderColor.b + ', ' + borderColor.a + ')',
     borderWidth: borderWidth + 'px',
     borderStyle: borderStyle,
-    margin: margin.left + 'px ' + margin.top + 'px ' + margin.right + 'px ' + margin.bottom + 'px',
-    padding: padding.left + 'px ' + padding.top + 'px ' + padding.right + 'px ' + padding.bottom + 'px',
+    margin: margin.top + 'px ' + margin.right + 'px ' + margin.bottom + 'px ' + margin.left + 'px',
+    padding: padding.top + 'px ' + padding.right + 'px ' + padding.bottom + 'px ' + padding.left + 'px',
     width: containerWidth === 'full' ? '100%' : '1200px',
   }
 

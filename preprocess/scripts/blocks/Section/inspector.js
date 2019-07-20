@@ -116,15 +116,6 @@ export default class Inspector extends Component {
             <h4>Padding</h4>
             <div className="builder-blocks-settings-padding-wrap">
               <TextControl
-                label="Left"
-                type="number"
-                value={ padding.left }
-                onChange={ (value) => this.props.block.setAttributes({ padding: {
-                  ...padding,
-                  left: value
-                } }) }
-              />
-              <TextControl
                 label="Top"
                 type="number"
                 value={ padding.top }
@@ -149,6 +140,15 @@ export default class Inspector extends Component {
                 onChange={ (value) => this.props.block.setAttributes({ padding: {
                   ...padding,
                   bottom: value
+                } }) }
+              />
+              <TextControl
+                label="Left"
+                type="number"
+                value={ padding.left }
+                onChange={ (value) => this.props.block.setAttributes({ padding: {
+                  ...padding,
+                  left: value
                 } }) }
               />
             </div>

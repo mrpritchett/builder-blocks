@@ -57,9 +57,9 @@ export default {
       type: 'string',
       default: 'no-repeat',
     },
-    borderSize: {
-      type: 'string',
-      default: '0',
+    borderWidth: {
+      type: 'number',
+      default: 0,
     },
     borderStyle: {
       type: 'string',
