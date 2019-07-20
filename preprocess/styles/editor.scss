@@ -12,3 +12,14 @@
 .wp-block[data-align="full"] {
     max-width: none;
 }
+
+.builder-blocks-settings-margin-wrap,
+.builder-blocks-settings-padding-wrap {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 30px;
+
+	.components-base-control {
+		margin-bottom: 0 !important;
+	}
+}
