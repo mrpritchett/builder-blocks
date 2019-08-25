@@ -10,6 +10,10 @@ export default {
   icon: 'excerpt-view',
   attributes: {
     // Universal Attributes
+    sectionPosition: {
+      type: 'string',
+      default: 'relative',
+    },
     padding: {
       type: 'object',
       default: {
