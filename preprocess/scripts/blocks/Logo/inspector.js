@@ -6,23 +6,66 @@ const ALLOWED_MEDIA_TYPES = [ 'image' ]
 
 export default class Inspector extends Component {
   render = () => {
-    const { padding, margin, backgroundImage, backgroundColor, borderWidth, borderStyle, borderColor, sectionPosition } = this.props.block.attributes
+    const { padding, margin, backgroundImage, backgroundColor, borderWidth, borderStyle, borderColor, logoType, logoTitle, logoDescription, logoImage } = this.props.block.attributes
     return (
       <InspectorControls>
-        <PanelBody title={ __('Section Settings') }>
-          <h4>Section Positioning</h4>
-          <div className="builder-block-settings-positioning">
+        <PanelBody title={ __('Logo Settings') }>
+          <div className="">
             <SelectControl
-              label={ __( 'Select Section Positioning:' ) }
-              value={ sectionPosition }
-              onChange={ (value) => this.props.block.setAttributes({ sectionPosition: value }) }
+              label={ __( 'Select logo type:' ) }
+              value={ logoType }
+              onChange={ (value) => this.props.block.setAttributes({ logoType: value }) }
               options={ [
-                  { value: 'relative', label: 'Relative' },
-                  { value: 'absolute', label: 'Absolute' },
-                  { value: 'fixed', label: 'Fixed' },
+                  { value: 'text', label: 'Text' },
+                  { value: 'image', label: 'Image' },
               ] }
             />
           </div>
+          {
+            logoType === 'image'
+            ? (
+              <div className="builder-blocks-settings-background-container">
+                <h4>{ __('Logo Image') }</h4>
+                <div className="builder-blocks-settings-logo-image-wrap">
+                  <img src={ logoImage.url } alt={ logoImage.alt } height="100" width="100" />
+                    <MediaUploadCheck>
+                      <MediaUpload
+                        onSelect={ (media) => this.props.block.setAttributes({ logoImage: {
+                          ...logoImage,
+                          alt: media.alt,
+                          url: media.url,
+                          id: media.id,
+                        } }) }
+                        allowedTypes={ ALLOWED_MEDIA_TYPES }
+                        value={ logoImage.id }
+                        render={ ({ open }) => (
+                          <Button onClick={ open }>
+                            { __('Open Media Library' ) }
+                          </Button>
+                        ) }
+                      />
+                    </MediaUploadCheck>
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="builder-blocks-settings-background-container">
+                  <TextControl
+                    label="Site Title"
+                    value={ logoTitle }
+                    onChange={ (logoTitle) => this.props.block.setAttributes({ logoTitle }) }
+                  />
+                </div>
+                <div className="builder-blocks-settings-background-container">
+                  <TextControl
+                    label="Site Description"
+                    value={ logoDescription }
+                    onChange={ (logoDescription) => this.props.block.setAttributes({ logoDescription }) }
+                  />
+                </div>
+              </>
+            )
+          }
         </PanelBody>
         <PanelBody title={ __('Style Settings') }>
           <div className="builder-blocks-settings-background-container">

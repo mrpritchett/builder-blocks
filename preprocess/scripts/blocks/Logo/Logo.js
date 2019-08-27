@@ -4,16 +4,32 @@ import save from './save'
 const { __ } = wp.i18n
 
 export default {
-  title: __('Section'),
-  description: __('A wrapper block for rows.'),
+  title: __('Logo'),
+  description: __('A block that displays the site title & description or an image logo.'),
   category: 'builder-blocks',
   icon: 'excerpt-view',
   attributes: {
-    // Universal Attributes
-    sectionPosition: {
+    logoType: {
       type: 'string',
-      default: 'relative',
+      default: 'text'
     },
+    logoImage: {
+      type: 'object',
+      default: {
+        alt: '',
+        url: '',
+        id: 0,
+      },
+    },
+    logoTitle: {
+      type: 'string',
+      default: 'Site Title',
+    },
+    logoDescription: {
+      type: 'string',
+      default: 'Site Description',
+    },
+    // Universal Attributes
     padding: {
       type: 'object',
       default: {
@@ -77,14 +93,6 @@ export default {
         b: 255,
         a: 1.0,
       },
-    },
-    containerWidth: {
-      type: 'string',
-      default: 'full',
-    },
-    contentWidth: {
-      type: 'string',
-      default: 'container',
     },
   },
   edit,
