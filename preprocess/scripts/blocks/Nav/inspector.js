@@ -5,21 +5,59 @@ const { PanelBody, TextControl, ColorPicker, SelectControl, Button } = wp.compon
 const ALLOWED_MEDIA_TYPES = [ 'image' ]
 
 export default class Inspector extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      navMenus: []
+    }
+
+    this.getMenus()
+  }
+
+  getMenus = () => {
+    fetch(`http://${window.location.hostname}/wp-json/builder_blocks/menus/`)
+      .then(response => response.json())
+      .then(data => {
+        let navMenus = []
+        data.map(dataItem => {
+          let object = {
+            value: dataItem.term_id,
+            label: dataItem.name,
+          }
+          navMenus.unshift(object)
+        })
+
+        if ('undefined' === typeof this.props.block.attributes.navMenu) {
+          this.props.block.setAttributes({ navMenu: data[0].term_id })
+        }
+
+        this.getMenuItems()
+        this.setState({ navMenus: navMenus })
+      })
+      .catch(error => console.error(error))
+  }
+
+  getMenuItems = () => {
+    fetch(`http://${window.location.hostname}/wp-json/builder_blocks/menus/${this.props.block.attributes.navMenu}`)
+      .then(response => response.json())
+      .then(data => {
+        console.log('data: ', data)
+        this.setState({ menuItems: data.items })
+      })
+      .catch(error => console.error(error))
+  }
+
   render = () => {
-    const { padding, margin, backgroundImage, backgroundColor, borderWidth, borderStyle, borderColor, sectionPosition } = this.props.block.attributes
+    const { padding, margin, backgroundImage, backgroundColor, borderWidth, borderStyle, borderColor, navMenu } = this.props.block.attributes
     return (
       <InspectorControls>
         <PanelBody title={ __('Section Settings') }>
           <div className="builder-block-settings-positioning">
             <SelectControl
-              label={ __( 'Select Section Positioning:' ) }
-              value={ sectionPosition }
-              onChange={ (value) => this.props.block.setAttributes({ sectionPosition: value }) }
-              options={ [
-                  { value: 'relative', label: 'Relative' },
-                  { value: 'absolute', label: 'Absolute' },
-                  { value: 'fixed', label: 'Fixed' },
-              ] }
+              label={ __( 'Select Nav Menu:' ) }
+              value={ navMenu }
+              onChange={ (value) => this.props.block.setAttributes({ navMenu: value }) }
+              options={ this.state.navMenus }
             />
           </div>
         </PanelBody>
