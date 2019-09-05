@@ -6,21 +6,15 @@ const ALLOWED_MEDIA_TYPES = [ 'image' ]
 
 export default class Inspector extends Component {
   render = () => {
-    const { padding, margin, backgroundImage, backgroundColor, borderWidth, borderStyle, borderColor, sectionPosition } = this.props.block.attributes
+    const { padding, margin, backgroundImage, backgroundColor, borderWidth, borderStyle, borderColor } = this.props.block.attributes
     return (
       <InspectorControls>
-        <PanelBody title={ __('Section Settings') }>
-          <div className="builder-block-settings-positioning">
-            <SelectControl
-              label={ __( 'Select Section Positioning:' ) }
-              value={ sectionPosition }
-              onChange={ (value) => this.props.block.setAttributes({ sectionPosition: value }) }
-              options={ [
-                  { value: 'relative', label: 'Relative' },
-                  { value: 'absolute', label: 'Absolute' },
-                  { value: 'fixed', label: 'Fixed' },
-              ] }
-            />
+        <PanelBody title={ __('Menu Settings') }>
+          <div className="builder-blocks-settings-background-container">
+            <h4>Select Menu</h4>
+            <div className="builder-blocks-settings-background-wrap">
+
+            </div>
           </div>
         </PanelBody>
         <PanelBody title={ __('Style Settings') }>

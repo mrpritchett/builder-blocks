@@ -1,9 +1,9 @@
 const { Component, createElement } = wp.element
-const { Disabled } = wp.components
+const { InnerBlocks } = wp.editor
 
 export default class Editor extends Component {
   render = () => {
-    const { padding, margin, backgroundImage, backgroundColor, backgroundSize, backgroundPosition, backgroundRepeat, borderWidth, borderStyle, borderColor, logoType, logoImage, logoTitle, logoDescription } = this.props.block.attributes
+    const { padding, margin, backgroundImage, backgroundColor, backgroundSize, backgroundPosition, backgroundRepeat, borderWidth, borderStyle, borderColor, contentWidth, containerWidth } = this.props.block.attributes
 
     const style = {
       backgroundColor: 'rgba(' + backgroundColor.r + ', ' + backgroundColor.g + ', ' + backgroundColor.b + ', ' + backgroundColor.a + ')',
@@ -19,25 +19,9 @@ export default class Editor extends Component {
     }
 
     return (
-      <Disabled>
-        <div className="builder-blocks-logo-block" style={ style }>
-          {
-            logoType === 'image'
-              ? (
-                <a className="site-branding" href={ window.location.host }><img src={ logoImage.media.url } alt={ logoImage.media.alt } /></a>
-              ) : (
-                <div className="site-branding">
-                  <h1 className="site-title"><a href="">{ logoTitle }</a></h1>
-                  {
-                    logoDescription && (
-                      <h2 className="site-description">{ logoDescription }</h2>
-                    )
-                  }
-                </div>
-              )
-          }
-        </div>
-      </Disabled>
+      <div className="builder-blocks-menu-block" style={ style }>
+
+      </div>
     )
   }
 }

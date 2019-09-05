@@ -64,4 +64,23 @@
   .builder-blocks-settings-padding-wrap .components-base-control {
     margin-bottom: 0 !important; }
 
+.builder-blocks-nav-block {
+  width: 100%; }
+
+.builder-blocks-nav-block-menu {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  .builder-blocks-nav-block-menu a {
+    font-size: 1.8rem;
+    text-decoration: none; }
+    .builder-blocks-nav-block-menu a:hover {
+      text-decoration: underline; }
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi8uLi9ibG9ja3MvZGlzdC9tYWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/

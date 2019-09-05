@@ -1,0 +1,24 @@
+.builder-blocks-nav-block {
+	width: 100%;
+}
+
+.builder-blocks-nav-block-menu {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	a {
+		font-size: 1.8rem;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

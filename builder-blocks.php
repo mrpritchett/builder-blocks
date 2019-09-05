@@ -43,6 +43,10 @@ define( 'BUILDERBLOCKS', '1.0.0' );
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-builder-blocks-assets.php';
 require plugin_dir_path( __FILE__ ) . 'includes/class-builder-blocks-categories.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-builder-blocks-rest-api-nav-routes.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-builder-blocks-nav-block.php';
 
 Builder_Blocks_Assets::init();
 Builder_Blocks_Categories::init();
+Builder_Blocks_REST_API_Nav_Routes::init();
+Builder_Blocks_Nav_Block::init();
