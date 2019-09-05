@@ -26,7 +26,11 @@ export default function (block) {
           ) : (
             <div className="site-branding">
               <h1 className="site-title"><a href="">{ logoTitle }</a></h1>
-              <h2 className="site-description">{ logoDescription }</h2>
+              {
+                logoDescription === '' && (
+                  <h2 className="site-description">{ logoDescription }</h2>
+                )
+              }
             </div>
           )
       }
