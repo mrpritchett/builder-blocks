@@ -1,5 +1,5 @@
 .builder-blocks-nav-block {
-
+	width: 100%;
 }
 
 .builder-blocks-nav-block-menu {
@@ -12,4 +12,13 @@
 	margin: 0;
 	padding: 0;
 	width: 100%;
+
+	a {
+		font-size: 1.8rem;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
