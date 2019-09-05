@@ -1,5 +1,4 @@
 import edit from './edit'
-import save from './save'
 
 const { __ } = wp.i18n
 
@@ -88,5 +87,7 @@ export default {
     },
   },
   edit,
-  save
+  save: () => {
+    return null
+  }
 }

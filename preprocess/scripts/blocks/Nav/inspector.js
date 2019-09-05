@@ -41,8 +41,7 @@ export default class Inspector extends Component {
     fetch(`http://${window.location.hostname}/wp-json/builder_blocks/menus/${this.props.block.attributes.navMenu}`)
       .then(response => response.json())
       .then(data => {
-        console.log('data: ', data)
-        this.setState({ menuItems: data.items })
+        this.props.block.setAttributes({ menuItems: data.items })
       })
       .catch(error => console.error(error))
   }

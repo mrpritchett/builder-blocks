@@ -5,7 +5,7 @@ export default class Editor extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      menuItems: []
+      navItems: []
     }
 
     this.getMenuItems()
@@ -15,10 +15,7 @@ export default class Editor extends Component {
     fetch(`http://${window.location.hostname}/wp-json/builder_blocks/menus/${this.props.block.attributes.navMenu}`)
       .then(response => response.json())
       .then(data => {
-        console.log('data: ', data)
-        data.items.map(item => {
-          dataItem.items
-        })
+        this.setState({ navItems: data.items })
       })
       .catch(error => console.error(error))
   }
@@ -39,12 +36,16 @@ export default class Editor extends Component {
       padding: padding.top + 'px ' + padding.right + 'px ' + padding.bottom + 'px ' + padding.left + 'px',
     }
 
-    console.log('navMenu: ', this.props.block.attributes.navMenu)
+    const navItems = this.state.navItems.map((item) => {
+      return (
+        <a href={ item.url }>{ item.title }</a>
+      )
+    })
 
     return (
       <div className="builder-blocks-nav-block" style={ style }>
         <nav>
-
+          { navItems }
         </nav>
       </div>
     )
