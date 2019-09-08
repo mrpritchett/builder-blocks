@@ -22,10 +22,10 @@ export default function (block) {
       {
         logoType === 'image'
           ? (
-            <a className="site-branding" href={ window.location.host }><img src={ logoImage.media.url } alt={ logoImage.media.alt } /></a>
+            <a className="site-branding" href={ location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '') }><img src={ logoImage.media.url } alt={ logoImage.media.alt } /></a>
           ) : (
             <div className="site-branding">
-              <h1 className="site-title"><a href="">{ logoTitle }</a></h1>
+              <h1 className="site-title"><a href={ location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '') }>{ logoTitle }</a></h1>
               {
                 logoDescription && (
                   <h2 className="site-description">{ logoDescription }</h2>
